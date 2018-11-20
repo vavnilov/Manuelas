@@ -1,0 +1,5 @@
+<div class="products">
+ <% @products.each do |product| %>
+   <a href="<%= product_path(product) %>" class="product_img"><%= image_tag("#{product.img_url}", :width => "200") %></a>
+ <% end %>
+</div>

@@ -1,0 +1,21 @@
+<body background='assets/signup_final.jpg'>
+<%= form_tag '/login' do %>
+<div class='form-group'>
+  <div class='form-column'>
+    <div class='col-sm-7 center'>
+       <%= label_tag :user_name %><br>
+       <%= text_field_tag :user_name%>
+     </div>
+     <br>
+     <div class='col-sm-7 center'>
+       <%= label_tag :password %><br>
+       <%= password_field_tag :password%>
+     </div>
+     <br>
+     <div class='col-sm-7 center'>
+       <%= submit_tag "Log in!", class:'btn btn-light center'%>
+     </div>
+    </div>
+  </div>
+<% end %>
+</body>

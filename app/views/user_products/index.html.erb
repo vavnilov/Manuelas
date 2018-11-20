@@ -1,0 +1,10 @@
+<div class="top_padding">
+  <h3> Please select the item you would like to view</h3>
+  <div class="iconbox">
+     <% @user_products.each do |user_product| %>
+       <% if user_product.user != @user %>
+         <div class="aaa top_padding"><p><a href="<%= user_product_path(user_product) %>"><%= image_tag("#{user_product.product.img_url}", :width => "100") %></a><%= user_product.product.name %></p></div>
+       <% end %>
+     <% end %>
+  </div>
+</div>

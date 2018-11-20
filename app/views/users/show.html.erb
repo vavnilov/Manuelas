@@ -1,0 +1,17 @@
+<% if flash[:notice] %>
+ <div class="alert alert-danger" role="alert">
+   <%= flash[:notice] %>
+ </div>
+<% end %>
+
+<h1 class='middle'><%= @user.full_name %></h1>
+
+<p>Your bank account balance is $<strong><%= @user.bank_account %></strong>.</p>
+  <ol>
+    <% @array_products.each do |cartItem| %>
+      <li><img src="<%="#{cartItem.product.img_url}"%>" style='width: 100px; padding:10px;'/><%= cartItem.product.name %>- $<%= cartItem.price %></li>
+    <% end %>
+  </ol>
+<p>Your cart total is $ <%= @cart_total %></p>
+<%= link_to "Delete Cart", users_delete_cart_path, class:'btn btn-light' %>
+<%= link_to "Check Out", users_cart_path, method: :post, class: 'btn btn-light'%>
