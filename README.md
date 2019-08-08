@@ -1,7 +1,6 @@
 An e-commerce platform built fully with Ruby on Rails.
 
-Clone the repository and run:
+Clone the repository, make sure to have Rails installed, and run the following commands:
 
-# rails s
-
-to begin the server
+rails db:migrate
+rails s
